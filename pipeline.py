@@ -91,8 +91,8 @@ def main():
         # Commit all the inserts to the database
         conn.commit()
         print(f"Successfully processed and inserted {len(df)} rows into the database.")
-
-    except FileNotFoundError:
+       #  exception handling
+        except FileNotFoundError:
         print(f"Error: The file {CSV_FILE_PATH} was not found. Please check the path and filename.")
     except Exception as e:
         print(f"An error occurred: {e}")
